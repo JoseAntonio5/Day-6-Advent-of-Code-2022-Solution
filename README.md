@@ -13,11 +13,11 @@ Para a minha solução comecei criando duas variáveis globais (*NUM_SEQUENCE_PA
 
 Foi declarada uma função *find_start_of_packet* que recebe uma mensagem (string) como parâmetro e a percorre tendo i como o índice de cada caractere dessa string.
 
-É feita uma verificação para ver se a mensagem chegou nos últimos 4 caracteres, visto que ela não poderá mais ser um start-of-packet caso seu tamanho seja menor do que 4.
+É feita uma verificação para ver se a mensagem chegou nos últimos 4 caracteres, visto que ela não poderá mais ser um start-of-packet caso seu tamanho seja menor do que 4 (ou 14).
 
-É usado um *set()* para retornar os dados exclusivos daquela string (caracteres únicos presentes nos 4 elementos que estão sendo analisados na mensagem).
+É usado um *set()* para retornar os dados exclusivos daquela string (caracteres únicos presentes nos 4 (ou 14) elementos que estão sendo analisados na mensagem).
 
-Como o *set()* só retorna os caracteres exclusivos, então caso o tamanho do retorno seja 4 quer dizer que os quatro elementos retornados são únicos, dessa forma, temos um start-of-packet
+Como o *set()* só retorna os caracteres exclusivos, então caso o tamanho do retorno seja 4 (ou 14) quer dizer que os quatro elementos retornados são únicos, dessa forma, temos um start-of-packet
 
 Caso o start-of-packet seja encontrado, é exibido o índice do marker
 
