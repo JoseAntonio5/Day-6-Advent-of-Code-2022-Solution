@@ -14,7 +14,7 @@ def find_start_of_packet(message):
             # o set() é uma coleção que retorna dados exclusivos (que não se repetem)
             # caso o tamanho do set retornado seja igual a 4 (ou seja, os 4 elementos são exclusivos) então significa que aqueles quatro elementos são únicos e não tem caracteres que se repetem
             if(len(set(message[i:i+NUM_SEQUENCE_PART_ONE])) == len(message[i:i+NUM_SEQUENCE_PART_ONE])):
-                # mostra o índice do último elemento de um start-of-packet
+                # mostra o índice do último elemento de um start-of-packet (marker)
                 print(f'o indice é: {i + NUM_SEQUENCE_PART_ONE}')
                 break
 
